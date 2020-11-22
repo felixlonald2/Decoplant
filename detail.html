@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Decoplant</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body style="background-color: #bdd0d1;">
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.html"><img src="img/Asset 9xxxhdpi.png" width="160"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto" style="font-weight:500;">
+                <li class="nav-item" style="padding-right: 80px;" >
+                    <a href="index.html">
+                        <button class="btn" id="btnHome"  type="button">Home</button>
+                    </a>
+				</li>
+				<li class="nav-item" style="padding-right: 80px;">
+					<div class="dropdown mt-3">
+						<button class="btn dropdown-toggle"  type="button" id="dropdownKategori" data-toggle="dropdown">
+							Category
+						</button>
+						<div class="dropdown-menu">
+						  <a class="dropdown-item" href="#">Bonsai</a>
+						  <a class="dropdown-item" href="#">Cactus</a>
+						  <a class="dropdown-item" href="#">Aquatic Plants</a>
+						</div>
+					</div>
+					<div id="underline"></div>
+				</li>
+				<li class="nav-item" >
+					<div class="container">
+						<input type="text" class="form-control mt-3" id="inputSearch"  placeholder="Search">
+                        <a href="search.html" style="color:black;">
+                            <i class="fa fa-search iconSearch"></i>
+                        </a>
+					</div>
+				</li>
+                <li class="nav-item " style="padding-right: 30px;">
+                    <a href="cart.html">
+                        <button class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div id="cartText">Cart</div>
+                        </button>
+                    </a>
+				</li>
+				<li class="nav-item" style="padding-right: 50px;">
+					<button class="btn notification">
+						<i class="fa fa-bell" style="position: relative; left: -30px;"></i>
+						<div id="notificationText">Notification</div>
+					</button>
+				</li>
+				<li class="nav-item">
+					<div class="dropdown mt-3">
+						<i class="fa fa-user iconUser"></i>
+						<button class="btn"  type="button" id="dropdownUser" data-toggle="dropdown">
+							Hi, User ! 
+						</button>
+						<div class="dropdown-menu">
+						  <a class="dropdown-item" href="#">Profile</a>
+						  <a class="dropdown-item" href="#">Logout</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="img/plant1.png" style="width: 350px;height: 350px;">
+        </div>
+        <div class="col">
+            <div class="row mt-5 pl-4">
+                <p class="text nameText">Calathea Keris (Calathea Lancifolia)</p> 
+                <p class="text hargaText">Rp.150.000</p>
+            </div>
+            <div class="row pl-4">
+                <p class="text infoText"> 
+                    Calathea lancifolia (rattlesnake plant) is a species of flowering plant in the Marantaceae family, native to Brazil.
+                    It is an evergreen perennial, growing to 60–75 cm (24–30 in), with slender pale green leaves to 45 cm (18 in), 
+                    heavily marked above with dark blotches, purple below.
+                </p>
+            </div>
+            <div class="row mt-5 pl-5">
+                <div class="col">
+                    <i class="fa fa-minus-circle iconMinus" style="width: 30px;height: 30px;"></i>
+                </div>
+                <div class="col">
+                    <p class="text jumlahText">
+                        2
+                    </p>
+                </div>
+                <div class="col">
+                    <i class="fa fa-plus-circle" style="width: 30px;height: 30px;"></i>
+                </div>
+                <div class="col">
+                    <button class="btn addtoCart">
+                        <i class="fa fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 pl-4">
+        <h3>You May Like</h3>
+    </div>
+
+    <div class="row mt-5 pl-4"style="font-family: montserratBold;" >
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant1.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 1</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant2.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 2</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant3.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 3</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant4.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 4</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 pl-4"style="font-family: montserratBold;" >
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant5.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 5</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant6.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 6</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant7.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 7</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="recommendedPlant">
+                <img id="recommendedPlantPhoto" src="img/plant8.png">
+                <div data-aos="fade-up" id="recommendedPlantName">Plant 8</div>
+                <div data-aos="fade-up" id="recommendedPlantPrice">Rp.150.000</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--- Footer -->
+
+<div class="d-flex justify-content-around mt-5" style="background-color:#2e4044;">
+	<div class="col-md-2 p-1">
+		<img src="img/Asset 8xxxhdpi.png" style="width: 160px; height:40px;margin-top: 60px;">
+	</div>
+	<div class="col-md-2 p-1">
+		<p id="contactUs">Contact Us : <br> Monday - Friday <br> 09:00 - 17:00 <br><br> help@decoplant.com </p>  
+	</div>
+	<div class="col-md-2 pl-1" style="font-family: montserratMedium; color:white;color: rgb(227, 232, 232);">
+		
+			<img src="img/Asset 3xxxhdpi.png" style="width: 30px; height:30px;"> deco_plant
+			<br> <br>
+			<img src="img/Asset 2xxxhdpi.png" style="width: 30px; height:30px;"> decoplant
+			<br> <br>
+			<img src="img/Asset 1xxxhdpi.png" style="width: 30px; height:30px;"> decoplant.id
+		
+	</div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    AOS.init({
+        duration : 1200,
+    })
+</script>
